@@ -41,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/app/recipes/recipe.service.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recipe-details.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="recipe-details.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/recipes/recipe-details/recipe-details.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -64,8 +64,8 @@
       <file leaf-file-name="recipe-details.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/recipes/recipe-details/recipe-details.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+            <state relative-caret-position="425">
+              <caret line="25" column="114" lean-forward="false" selection-start-line="25" selection-start-column="114" selection-end-line="25" selection-end-column="114" />
               <folding />
             </state>
           </provider>
@@ -97,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/app/shopping-list/shopping-list.service.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,17 +107,17 @@
         <entry file="file://$PROJECT_DIR$/app/shopping-list/shopping-list.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recipe.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="recipe.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/recipes/recipe.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="83" lean-forward="false" selection-start-line="3" selection-start-column="83" selection-end-line="3" selection-end-column="83" />
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,10 +142,10 @@
         <option value="$PROJECT_DIR$/app/recipes/recipe.service.ts" />
         <option value="$PROJECT_DIR$/app/shopping-list/add-item/add-item.component.html" />
         <option value="$PROJECT_DIR$/app/app.component.html" />
-        <option value="$PROJECT_DIR$/app/recipes/recipe.ts" />
-        <option value="$PROJECT_DIR$/app/recipes/recipe-details/recipe-details.component.ts" />
         <option value="$PROJECT_DIR$/app/shopping-list/shopping-list.component.html" />
+        <option value="$PROJECT_DIR$/app/recipes/recipe-details/recipe-details.component.ts" />
         <option value="$PROJECT_DIR$/app/recipes/recipe-details/recipe-details.component.html" />
+        <option value="$PROJECT_DIR$/app/recipes/recipe.ts" />
       </list>
     </option>
   </component>
@@ -357,12 +357,12 @@
       <option name="presentableId" value="Default" />
       <updated>1481838125880</updated>
       <workItem from="1481838127396" duration="799000" />
-      <workItem from="1481839040399" duration="7087000" />
+      <workItem from="1481839040399" duration="7495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7886000" />
+    <option name="totallyTimeSpent" value="8294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1932" height="1047" extended-state="0" />
@@ -446,7 +446,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -529,14 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/recipes/recipe.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="83" lean-forward="false" selection-start-line="3" selection-start-column="83" selection-end-line="3" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/recipes/recipe-list/recipe-list.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -548,7 +540,7 @@
     <entry file="file://$PROJECT_DIR$/app/shopping-list/shopping-list.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -566,15 +558,7 @@
     <entry file="file://$PROJECT_DIR$/app/shopping-list/shopping-list.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/recipes/recipe-details/recipe-details.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -582,7 +566,7 @@
     <entry file="file://$PROJECT_DIR$/app/recipes/recipe.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -592,10 +576,26 @@
     <entry file="file://$PROJECT_DIR$/app/recipes/recipe-details/recipe-details.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/recipes/recipe-details/recipe-details.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="114" lean-forward="false" selection-start-line="25" selection-start-column="114" selection-end-line="25" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/recipes/recipe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
