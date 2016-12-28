@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output} from '@angular/core';
 import { Recipe } from '../recipe';
 import { RecipeService } from '../recipe.service';
+import {Ingredient} from "../../ingredient";
 
 
 @Component({
@@ -11,9 +12,7 @@ import { RecipeService } from '../recipe.service';
 export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[] = []; /** Array of Recipes */
-
-  recipeTest = new Recipe('Test Input', 'Test Input', 'https://www.procook.com.au/new/wp-content/uploads/2015/01/spicy-grilled-non-vegetarian-meat-food.jpg', "kk")
-
+  
   /*Trigger new event*/
   @Output() recipeSelected = new EventEmitter<Recipe>();
 
