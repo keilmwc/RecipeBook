@@ -20,6 +20,7 @@ import { routing } from './routes';
 
 @NgModule({
   declarations: [
+
     AppComponent,
     HeaderComponent,
     RecipesComponent,
