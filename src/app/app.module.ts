@@ -3,20 +3,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
-import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
+import { AppComponent } from './components/app/app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { RecipesComponent } from './components/recipes/recipes.component';
+import { RecipeListComponent } from './components/recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './components/recipes/recipe-list/recipe-item/recipe-item.component';
+import { RecipeDetailsComponent } from './components/recipe-details/recipe-details.component';
 
-import { AddItemComponent } from './shopping-list/add-item/add-item.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { AddItemComponent } from './components/shopping-list/add-item/add-item.component';
+import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
 
-import { DropdownDirective } from './dropdown/dropdown.directive';
-import {ShoppingListService} from "./shopping-list/shopping-list.service";
+import { DropdownDirective } from './components/dropdown/dropdown.directive';
+import {ShoppingListService} from "./services/shopping-list.service";
 
-import { routing } from './routes';
+import { routing } from './routing/routes';
 
 @NgModule({
   declarations: [
