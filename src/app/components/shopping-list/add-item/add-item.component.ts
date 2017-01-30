@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, Input } from '@angular/core';
 import {Ingredient} from "../../../models/ingredient";
 import {ShoppingListService} from "../../../services/shopping-list.service";
 
@@ -7,12 +7,19 @@ import {ShoppingListService} from "../../../services/shopping-list.service";
   templateUrl: 'add-item.component.html',
   styleUrls: ['add-item.component.css']
 })
-export class AddItemComponent implements OnInit {
+export class AddItemComponent implements OnChanges {
   isAdd = true;
-  item: Ingredient;
+
+ @Input() item: Ingredient;
   constructor(private shoppingListService: ShoppingListService ) { }
 
-  ngOnInit() {
+  // Fire when 'item' value changes
+  ngOnChanges(changes) {
+    if(changes.item.currentValue === null){
+      this.isAdd = true;
+    }else{
+      this.isAdd = false;
+    }
   }
 
   onSubmit(ingredient: Ingredient){
