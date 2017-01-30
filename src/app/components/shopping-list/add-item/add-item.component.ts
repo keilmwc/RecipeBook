@@ -11,6 +11,7 @@ export class AddItemComponent implements OnChanges {
   @Input() item: Ingredient;
   isAdd = true;
 
+
   constructor(private shoppingListService: ShoppingListService ) { }
 
   // Fire when 'item' value changes
@@ -24,10 +25,12 @@ export class AddItemComponent implements OnChanges {
   }
 
   onSubmit(ingredient: Ingredient){
+    const newIngredient = new Ingredient(ingredient.name, ingredient.amount);
     if(!this.isAdd){
+      this.shoppingListService.editItem(this.item, newIngredient);
 
     }else{
-      this.item = new Ingredient(ingredient.name, ingredient.amount);
+      this.item = newIngredient;
       this.shoppingListService.addItem(this.item);
     }
 
