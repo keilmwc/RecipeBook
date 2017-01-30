@@ -8,9 +8,9 @@ import {ShoppingListService} from "../../../services/shopping-list.service";
   styleUrls: ['add-item.component.css']
 })
 export class AddItemComponent implements OnChanges {
+  @Input() item: Ingredient;
   isAdd = true;
 
- @Input() item: Ingredient;
   constructor(private shoppingListService: ShoppingListService ) { }
 
   // Fire when 'item' value changes

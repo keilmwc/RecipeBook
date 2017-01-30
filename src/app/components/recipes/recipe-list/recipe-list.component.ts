@@ -23,15 +23,9 @@ export class RecipeListComponent implements OnInit {
   }
 
   onSelected(recipe: Recipe){
-
-
-    this.recipeSelected.emit(recipe);
-    console.log(this);
-
-
     /*Push selected recipe to even emitter*/
-    this.recipeSelected.emit(recipe);
-
+    this.recipeSelected.emit(recipe)
+    console.log(this);
   }
 
 }
