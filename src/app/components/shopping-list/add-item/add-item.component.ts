@@ -17,6 +17,7 @@ export class AddItemComponent implements OnChanges {
   ngOnChanges(changes) {
     if(changes.item.currentValue === null){
       this.isAdd = true;
+      this.item = {name: null, amount: null};
     }else{
       this.isAdd = false;
     }
