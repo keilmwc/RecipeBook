@@ -63,6 +63,22 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
   onCancel(){
     this.navigateBack();
   }
+
+  onAddItem(name: String, amount: String){
+    (<FormArray>this.recipeForm.controls['ingredients']).push(
+      new FormGroup({
+        name: new FormControl(name, Validators.required),
+        amount: new FormControl(amount, [
+          Validators.required,
+          Validators.pattern("\\d+")
+        ])
+      })
+    );
+  }
+
+  onRemoveItem(index: number){
+    (<FormArray>this.recipeForm.controls['ingredients']).removeAt(index);
+  }
   // Prevent memory leaks
   ngOnDestroy() {
     this.subscription.unsubscribe();
