@@ -1,5 +1,5 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {RecipeService} from "../../services/recipe.service";
 import {Subscription} from "rxjs";
 import {Recipe} from "../../models/recipe";
@@ -17,15 +17,16 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
   private isNewRecipe = true;
   recipeForm: FormGroup;
 
-  constructor(private router: ActivatedRoute,
+  constructor(private route: ActivatedRoute,
               private recipeService: RecipeService,
-              private formBuilder: FormBuilder) {
+              private formBuilder: FormBuilder,
+              private router: Router) {
   }
 
   // Retrieve Id from recipe
   ngOnInit(){
     // Subscribe to params observable
-    this.subscription = this.router.params.subscribe(
+    this.subscription = this.route.params.subscribe(
       (params: any) => {
         // Check if recipe is new or existing
         if (params.hasOwnProperty('id')) {
@@ -44,6 +45,24 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     );
   }
 
+  onSubmit(){
+    const newRecipe = this.recipeForm.value;
+    if(this.isNewRecipe){
+      this.recipeService.addRecipe(newRecipe);
+    }else{
+      this.recipeService.editRecipe(this.recipe, newRecipe);
+    }
+    this.navigateBack();
+  }
+
+  // Navigate back to previous location
+  private navigateBack(){
+    this.router.navigate(['../']);
+  }
+
+  onCancel(){
+    this.navigateBack();
+  }
   // Prevent memory leaks
   ngOnDestroy() {
     this.subscription.unsubscribe();
@@ -56,7 +75,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     let recipeIngredients: FormArray = new FormArray([]);
 
     if(!this.isNewRecipe){
-      for(let i = 0; i< this.recipe.ingredients.length; i++){
+      for(let i = 0; i < this.recipe.ingredients.length; i++){
         recipeIngredients.push(
           new FormGroup({
             name: new FormControl(this.recipe.ingredients[i].name, Validators.required),
