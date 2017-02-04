@@ -8,7 +8,7 @@ import {Routes} from "@angular/router";
 
 export const RECIPE_ROUTES: Routes =[
   { path: '', component: RecipeStartComponent },
-  { path: 'new', component: RecipeStartComponent },
+  { path: 'new', component: RecipeEditComponent },
   { path: ':id', component: RecipeDetailsComponent },
   { path: ':id/edit', component: RecipeEditComponent }
 ];
