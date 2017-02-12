@@ -20,6 +20,7 @@ private subscription: Subscription;
               private route: ActivatedRoute,
               private recipeService: RecipeService) { }
 
+  // Observable to watch for changes to params in URL
   ngOnInit() {
     this.subscription = this.route.params.subscribe(
       (params: any) => {
@@ -29,9 +30,11 @@ private subscription: Subscription;
     );
   }
 
+  // Navigate to recipeEdit component
   onEdit(){
     this.router.navigate(['/recipes', this.recipeIndex, 'edit']);
   }
+
 
   onDelete(){
     this.recipeService.deleteRecipe(this.selectedRecipe);
@@ -41,6 +44,7 @@ private subscription: Subscription;
     this.sls.addItems(this.selectedRecipe.ingredients);
   }
 
+  // Close subscription to prevent memory leaks
   ngOnDestroy(){
     this.subscription.unsubscribe();
   }

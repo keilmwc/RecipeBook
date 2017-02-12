@@ -9,8 +9,6 @@ import {ShoppingListService} from "../../services/shopping-list.service";
   styleUrls: ['shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
-
-
   items: Ingredient[] = [];
   selectedItem: Ingredient = null;
 

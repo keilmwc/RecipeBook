@@ -25,6 +25,7 @@ export class AddItemComponent implements OnChanges {
     }
   }
 
+  // Check if item is new or being edited
   onSubmit(ingredient: Ingredient){
     const newIngredient = new Ingredient(ingredient.name, ingredient.amount);
     if(!this.isAdd){
@@ -35,11 +36,14 @@ export class AddItemComponent implements OnChanges {
       this.shoppingListService.addItem(this.item);
     }
   }
+
+  // Pass current item to service to be deleted
   onDelete(){
     this.shoppingListService.deleteItem(this.item);
     this.onClear();
   }
 
+  // Clear form controls
   onClear(){
     this.isAdd = true;
     this.cleared.emit(null);

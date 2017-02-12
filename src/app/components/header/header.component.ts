@@ -11,6 +11,7 @@ export class HeaderComponent{
 
   constructor(private recipeService: RecipeService) { }
 
+  // Store recipe array to Firebase
   onStore(){
     return this.recipeService.storeData().subscribe(
       data => console.log(data),
@@ -18,6 +19,7 @@ export class HeaderComponent{
     )
   }
 
+  // Get recipes from Firebase
   onFetch(){
     this.recipeService.fetchData();
   }

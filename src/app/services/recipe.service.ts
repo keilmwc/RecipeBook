@@ -1,40 +1,48 @@
-import { Injectable } from '@angular/core';
-import { Ingredient } from '../models/ingredient';
+import {Injectable, EventEmitter} from '@angular/core';
 import {Recipe} from '../models/recipe'
 import {Headers, Http, Response} from "@angular/http";
 import 'rxjs/Rx';
+import {Ingredient} from "../models/ingredient";
 
 @Injectable()
 export class RecipeService {
-  /*Array of recipe objects*/
+  recipesChanged = new EventEmitter<Recipe[]>();
   private recipes: Recipe[] = [
-    new Recipe('Chicken Tikka Masala', '4/5 Stars', 'https://s-media-cache-ak0.pinimg.com/originals/30/08/09/300809549465a4e5ec8ac31c9d5ff2ce.jpg',[new Ingredient('French Fries', 2),
-    new Ingredient('Pork Meat', 1)]),
-    new Recipe('Asain Zing Wings', '4/5 Stars', 'http://seonkyounglongest.com/wp-content/uploads/2014/02/167921_1273196766571_4035001_n1.jpg',[
-      new Ingredient('Chicken', 500)
-    ])
+    new Recipe('Schnitzel', 'Very tasty', 'http://images.derberater.de/files/imagecache/456xXXX_berater/berater/slides/WienerSchnitzel.jpg', [
+      new Ingredient('French Fries', 2),
+      new Ingredient('Pork Meat', 1)
+    ]),
+    new Recipe('Summer Salad', 'Okayish', 'http://ohmyveggies.com/wp-content/uploads/2013/06/the_perfect_summer_salad.jpg', [])
   ];
+
   constructor(private http: Http) { }
+
+  // Get all recipes
   getRecipes(){
       return this.recipes;
   }
 
+  // Get single recipe
   getRecipe(id: number){
     return this.recipes[id];
   }
 
+  // Delete recipe
   deleteRecipe(recipe: Recipe){
     this.recipes.splice(this.recipes.indexOf(recipe), 1)
   }
 
+  // Pushes new recipe to array
   addRecipe(recipe: Recipe){
     this.recipes.push(recipe);
   }
 
+  // Push edited recipe to array in place of old recipe
   editRecipe(oldRecipe: Recipe, newRecipe: Recipe){
     this.recipes[this.recipes.indexOf(oldRecipe)] = newRecipe;
   }
 
+  // Store recipes on DB
   storeData(){
     const body = JSON.stringify(this.recipes);
     const headers = new Headers({
@@ -43,12 +51,14 @@ export class RecipeService {
     return this.http.put('https://recipebook-9b93f.firebaseio.com/recipes.json', body, {headers: headers})
   }
 
+  // Get recipes from DB
   fetchData(){
     this.http.get('https://recipebook-9b93f.firebaseio.com/recipes.json')
       .map((response: Response) => response.json())
       .subscribe(
         (data: Recipe[]) => {
-          this.recipes = data
+          this.recipes = data;
+          this.recipesChanged.emit(this.recipes);
         }
       );
   }
