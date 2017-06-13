@@ -70,8 +70,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
       new FormGroup({
         name: new FormControl(name, Validators.required),
         amount: new FormControl(amount, [
-          Validators.required,
-          Validators.pattern("\\d+")
+          Validators.required
         ])
       })
     );
@@ -100,8 +99,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
             new FormGroup({
               name: new FormControl(this.recipe.ingredients[i].name, Validators.required),
               amount: new FormControl(this.recipe.ingredients[i].amount, [
-                Validators.required,
-                Validators.pattern("\\d+")
+                Validators.required
               ])
             })
           );
